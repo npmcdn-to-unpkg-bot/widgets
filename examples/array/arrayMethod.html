@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>push在数组末尾添加一个或者多个元素</p>
+		<p>delete 删除一个数组元素,delete之后,数组长度不变,原位置数据变成undefined </p>
+		<p>forEach 传入的是数组当前元素的值</p>
+		<script type="text/javascript">
+			//声明
+			var a = [1, 2, 3, 4, 5, 6];
+
+			//push在数组末尾添加一个或者多个元素
+			a.push(7, 8);
+			console.log(a.toString())
+			
+			// delete 删除一个数组元素
+			delete a[1]
+			console.log("delete之后数组长度不变: " + a.length);
+			console.log('delete之后,数组长度不变,原位置数据变成: ' + a[1]);
+			
+			a.forEach(function(x){
+				if(x==8)
+				console.log("forEach 输出的是每个数组元素的值" + x)
+			})
+		</script>
+	</body>
+
+</html>
