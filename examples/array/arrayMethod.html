@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>a.push(1),在数组末尾添加一个或者多个元素</p>
+		<p>delete a[1], 删除一个数组元素,delete之后,数组长度不变,原位置数据变成undefined </p>
+		<p>a.forEach(fuction(x){}) 传入的是数组当前元素的值</p>
+		<p>a.join(),讲数组所有的元素都转化为字符串连接在一起,返回生成的字符串,原数组不变</p>
+		<p>a.reverse(),将数组排序颠倒</p>
+		<p>a.sort(function(a,b){return a-b;}),负值是顺序排序,正直是倒叙排序</p>  
+		<p>a.concat(8,9),a.concat([8,9]),合并,a不变,返回新的数组</p>
+		
+		<script type="text/javascript">
+			//声明
+			var a = [1, 2, 3, 4, 5, 6];
+
+			//push在数组末尾添加一个或者多个元素
+			a.push(7, 8);
+			console.log(a.toString())
+			
+			// delete 删除一个数组元素
+			delete a[1]
+			console.log("delete之后数组长度不变: " + a.length);
+			console.log('delete之后,数组长度不变,原位置数据变成: ' + a[1]);
+			
+			a.forEach(function(x){
+				if(x==8)
+				console.log("forEach 输出的是每个数组元素的值" + x)
+			})
+			
+			//join
+			a[1] = 2;
+			console.log(a.join("-"))
+			
+			//reverse()
+			console.log(a.reverse().toString());
+			
+			//a.sort()
+			a.sort(function(a,b){return b-a;})
+			console.log("a.sort: " + a.toString())
+			
+			a.sort(function(a,b){return a-b;})
+			
+			//a.concat()
+			
+			console.log("a.concat: " + a.concat(9,10).toString())
+			
+			
+		</script>
+	</body>
+
+</html>
